@@ -1,0 +1,1043 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>InvokerTech</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta href="img/invokerlogo-01-01.png">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+
+    <script src="js/jquery.min.js"></script>
+
+    <!--- BOOTSTRAP ---->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css">
+    <script src="plugins/jquery-3.2.1.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!---- STYLESHEETS ------->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/imgeffect.css" />
+
+    <!-- start gallery Script -->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            var filterList = {
+
+                init: function() {
+
+                    // MixItUp plugin
+                    // http://mixitup.io
+                    $('#serviceslist').mixitup({
+                        targetSelector: '.services',
+                        filterSelector: '.filter',
+                        effects: ['fade'],
+                        easing: 'snap',
+                        // call the hover effect
+                        onMixEnd: filterList.hoverEffect()
+                    });
+
+                },
+
+                hoverEffect: function() {
+
+                    // Simple parallax effect
+                    $('#serviceslist .services').hover(
+                        function() {
+                            $(this).find('.label').stop().animate({
+                                bottom: 0
+                            }, 200, 'easeOutQuad');
+                            $(this).find('img').stop().animate({
+                                top: 0
+                            }, 500, 'easeOutQuad');
+                        },
+                        function() {
+                            $(this).find('.label').stop().animate({
+                                bottom: 0
+                            }, 200, 'easeInQuad');
+                            $(this).find('img').stop().animate({
+                                top: 0
+                            }, 300, 'easeOutQuad');
+                        }
+                    );
+
+                }
+
+            };
+
+            // Run the show!
+            filterList.init();
+
+
+        });
+    </script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+    <script>
+        $(document).ready(function() {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+    <script type="text/javascript" src="web/js/move-top.js"></script>
+    <script type="text/javascript" src="web/js/easing.js"></script>
+    <!-- end gallery-->
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1200);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--start-header-->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#header" aria-controls="header" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="img/37587-O1APW5-01.png" width="170px" height="auto"></a>
+
+        <div class="collapse navbar-collapse" id="header">
+            <ul class="navbar-nav ml-auto">
+                <li><a href="index.html" class="scroll">Home</a></li>
+                <li><a href="#solution" class="scroll">Solutions</a></li>
+                <li><a href="#about" class="scroll">About</a></li>
+                <li><a href="#services" class="scroll">Services</a></li>
+               <!-- <li><a href="#industries" class="scroll">Industries</a></li>-->
+                <li><a href="#partners" class="scroll">Our Partners</a></li>
+                <!--<li><a href="#ourTeam" class="scroll">Our Team</a></li>-->
+                <li><a href="#contact" class="scroll">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--end-header-->
+    <!-- start slider -->
+    <div class="slider_bg">
+        <div class="wrap">
+            <!--start-da-slider-->
+            <div class="da-slide">
+                <h2><span>Invoker</span>Tech</h2>
+                <p>InvokerTech is next generation product development Company in Pune, India. We are focused to bring new technology & concepts in the market. </p>
+                <!-- <a href="#" class="da-link">Learnmore</a> -->
+                <a href="#services" class="scroll"><span class="da-img"> </span> </a>
+            </div>
+            <!---//End-da-slider-->
+        </div>
+    </div>
+    <!---end-slider-->
+    <!--start solutions-->
+    <section id="solution">
+        <div class="wrap">
+            <div class="main">
+                <!-- start gallery  -->
+                <div class="gallery1">
+                    <!--start-mfp -->
+
+                    <!--end-mfp -->
+                    <!--start-content-->
+                    <div class="gallery">
+                        <div class="clear"> </div>
+                        <div class="container">
+                            <h2>Solutions</h2>
+                            <p></p>
+                            
+                                <ul id="filters" class="clearfix center">
+                                    <li><span class="filter active" data-filter="app">Mobile App Development</span></li>
+                                    <li><span class="filter" data-filter="app">VR/AR/MR</span></li>
+                                    <li><span class="filter" data-filter="web">Integrations</span></li>
+                                    <li><span class="filter" data-filter="app web">Website Development</span></li>
+                                    <li><span class="filter" data-filter="icon">E-Commerce</span></li>
+                                    <li><span class="filter" data-filter="card">Deep learning</span></li>
+                                    <li><span class="filter" data-filter="card">Artificial Intelligence</span></li>
+                                </ul>
+                            <div class="row serviceFilter" id="serviceslist">
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services app" data-cat="app">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-1">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/android.png" />
+                                                                <h3>Android App</h3>
+                                                                <p><a href="#">App Design</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-2">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/angular.png" />
+                                                                <h3>AngularJS</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services icon" data-cat="icon">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-16">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ecommerce-consulting.png" />
+                                                                <h3>Solutions</h3>
+                                                                <p><a href="#">E-commerce</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-10">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-content-marketing.png" />
+                                                                <h3>Content Marketing</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-30">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ux-design.png" />
+                                                                <h3>UX Design Services</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-3">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/bitcoin.png" />
+                                                                <h3>Bit Coin</h3>
+                                                                <p><a href="#">Integrations</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services logo" data-cat="logo">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-31">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/windows.png" />
+                                                                <h3>Windows Phone App</h3>
+                                                                <p><a href="#">App Design</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-24">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/integration-ussd.png" />
+                                                                <h3>USSD</h3>
+                                                                <p><a href="#">Integrations</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services app" data-cat="app">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-26">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/node_js.png" />
+                                                                <h3>Node JS</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services icon" data-cat="icon">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-16">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ecommerce-consulting.png" />
+                                                                <h3>Consulting</h3>
+                                                                <p><a href="#">E-commerce</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-29">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/tablet.png" />
+                                                                <h3>iPad App</h3>
+                                                                <p><a href="#">App Design</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services app" data-cat="app">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-20">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/file.png" />
+                                                                <h3>PHP Development</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services app" data-cat="app">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-18">
+                                                            <div class="ch-info">
+                                                                <img src="images/I-phone-App.png" />
+                                                                <h3>iPhone App</h3>
+                                                                <p><a href="#">App Design</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services app" data-cat="app">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-32">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/wordpress.png" />
+                                                                <h3>Wordpress Development</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-21">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/integration-payment-gateway.jpg" />
+                                                                <h3>Payment Gatway</h3>
+                                                                <p><a href="#">Integrations</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-22">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/integration-recharge-api.png" />
+                                                                <h3>Recharge API</h3>
+                                                                <p><a href="#">Integrations</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-23">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/integration-sms.png" />
+                                                                <h3>SMS</h3>
+                                                                <p><a href="#">Integrations</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-27">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ruby.jpg" />
+                                                                <h3>Ruby on Rails Dev.</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services web" data-cat="web" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-25">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/joomla.png" />
+                                                                <h3>Joomla Development</h3>
+                                                                <p><a href="#">Wed Development</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services icon" data-cat="icon" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-15">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ecommerce-design-dev.png" />
+                                                                <h3>Design & Development</h3>
+                                                                <p><a href="#">Ecommerce</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services icon" data-cat="icon" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-17">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ecommerce-management-software.jpg" />
+                                                                <h3>Management Softwere</h3>
+                                                                <p><a href="#">Ecommerce</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services icon" data-cat="icon" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-19">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/ecommerce-strategy.png" />
+                                                                <h3>Marketing & Strategy</h3>
+                                                                <p><a href="#">Ecommerce</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-11">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-affiliate-marketing.jpg" />
+                                                                <h3>Affiliate Marketing</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-8">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-email-marketing.png" />
+                                                                <h3>Email Marketing</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-9">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-mobile-marketing.png" />
+                                                                <h3>Mobile</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-12">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-ppc.png" />
+                                                                <h3>PPC Marketing</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-13">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-seo.png" />
+                                                                <h3>SEO</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide col-md-3 col-sm-3 col-xs-6">
+                                    <div class="services card" data-cat="card" id="hide">
+                                        <div class="services-wrapper">
+                                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                                <ul class="ch-grid">
+                                                    <li>
+                                                        <div class="ch-item ch-img-14">
+                                                            <div class="ch-info">
+                                                                <img src="img/1/digital-marketing-smo.png" />
+                                                                <h3>SMO</h3>
+                                                                <p><a href="#">Digital Marketing</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- container -->
+                        <script type="text/javascript" src="web/js/fliplightbox.min.js"></script>
+                        <script type="text/javascript">
+                            $('body').flipLightBox()
+                        </script>
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End-gallery-->
+    <!--start-about-->
+
+    <div class="about" id="about">
+        <div class="wrap">
+            <h2>About US</h2>
+            <p>InvokerTech is next generation product development Company in Pune, India. We are focused to bring new technology & concepts in the market.</p>
+            <div class="about-grids">
+                <div class="grid">
+                    
+                    <div class="desc">
+                        <h3>Welcome to InvokerTech</h3>
+
+                        <p class="discription">Invoker Tech is a full service Web development company providing services for corporate or individuals interested in designing their design and development needs of web based projects. Based in India, we are pioneer in providing
+                            total offshore and onshore web based and stand alone solutions for small to large enterprises. </p>
+                    </div>
+
+                </div>
+                <div class="grid">
+                    <!-- <div class="dc_zoom_css">
+				<span class="roll_css6">
+					<div class="social">
+						<ul>
+							<li><a class="sharefacebook" href="#"> </a> </li>
+							<li><a class="sharetwitter" href="#"> </a> </li>
+							<li><a class="sharetgoogle" href="#"> </a> </li>
+							<li><a class="sharedrible" href="#"> </a> </li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</span>
+				<img class="post-person" src="web/images/img2.jpg">
+				</div> -->
+                    <div class="desc">
+                        <h3>Looking for Designers/Developers?</h3>
+
+                        <p class="discription">Invoker Tech Provides various web based services Moreover, We always gives flexible low cost workforce. So, If you are looking for professional web designers or expert developers and reliable offshore development company then Invoker
+                            Tech can help you in these areas. As, we provide you with quality programmers, developers, Content Writers, Web Designers and other highly qualified professionals in most of the popular platforms.</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <!-- <div class="dc_zoom_css">
+				<span class="roll_css6">
+					<div class="social">
+						<ul>
+							<li><a class="sharefacebook" href="#"> </a> </li>
+							<li><a class="sharetwitter" href="#"> </a> </li>
+							<li><a class="sharetgoogle" href="#"> </a> </li>
+							<li><a class="sharedrible" href="#"> </a> </li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</span>
+				<img class="post-person" src="web/images/img3.jpg">
+				</div> -->
+                    <div class="desc">
+                        <h3>Quality Product Delivery</h3>
+
+                        <p class="discription">We deliver high quality solutions and services through our motivated and qualified team from IITs which is focused on exceeding clients expectations every time.</p>
+                    </div>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+    </div>
+    <!---end-about-->
+    <!--start-our services-->
+
+    <div class="about" id="services" style="background:#EBEBEB;">
+        <div class="wrap">
+            <h2 style="color: #444444;">Our Services</h2>
+            <p style="color: #444444; text-transform:uppercase">Do you have a project we can assist you with?</p>
+            <div class="services-grids row">
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/mobile-app-dev-min.jpeg" alt="">
+                    </div>
+                    <div class="post-name">
+                        <span>Mobile App Development</span>
+                    </div>
+
+
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/ui-ux-design-min.jpeg" alt="">
+                    </div>
+
+                    <div class="post-name">
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="">
+                        <img class="post-person" src="img/1/web-dev-min.jpg" alt="our team">
+                    </div>
+                    <div class="post-name">
+                        <span>Web Development</span>
+                    </div>
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/game-development-min.jpeg" alt="our team">
+                    </div>
+                    <div class="post-name">
+                        <span>Game Development</span>
+                    </div>
+
+
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/digital-marketing-min.jpeg" alt="our team">
+                    </div>
+                    <div class="post-name">
+                        <span>Digital Marketing</span>
+                    </div>
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/startup-min.jpg" alt="our team">
+                    </div>
+                    <div class="post-name">
+                        <span>StartUp</span>
+                    </div>
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/business-consulting-min.jpeg" alt="our team">
+                    </div>
+                    <div class="post-name">
+                        <span>Business Consulting</span>
+                    </div>
+                </div>
+                <div class="service-grid col-md-3 col-sm-4 col-xs-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/1/ecommerce-min.jpg" alt="our team">
+                    </div>
+                    <div class="post-name">
+                        <span>E-commerce</span>
+                    </div>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+    </div>
+    <!---end-our services-->
+    <!--start-partners-->
+
+    <div class="about" id="partners">
+        <div class="wrap">
+            <h2>Our Partners</h2>
+            <p style="text-transform:uppercase">Our happy clients, partners we work with </p>
+            <marquee direction="left" behavior="scroll" loop="-4" scrolldelay="10">
+
+                <img src="img/its.png" style="height: 60px;"> &nbsp; &nbsp;
+                <img src="img/instarepair.png"> &nbsp; &nbsp;
+                <img src="img/neuronGym.png"> &nbsp; &nbsp;
+                <img src="img/edlogiq.png"> &nbsp; &nbsp;
+                <img src="img/sheroes.png"> &nbsp; &nbsp;
+                <img src="img/comiccon.png" style="height: 60px;">
+
+
+
+            </marquee>
+
+        </div>
+    </div>
+    <!---end-partners-->
+    <!--start-our Team-  ->
+
+    <div class="about" id="ourTeam" style="background:#EBEBEB;">
+        <div class="wrap">
+            <h2 style="color: #444444;">Our Team</h2>
+            <p style="color: #444444;"></p>
+            <div class="about-grids row">
+                <div class=" team col-md-3 col-sm-4 col-sm-6">
+                    <div class="dc_zoom_css">
+
+                        <img class="post-person" src="img/abhi.jpg" alt="Abhishek Krishna">
+                        <span class="roll_css6xx">
+                            <div class="desc">
+                                <h3>Abhishek Krishna,<br> <small>IIT Roorkee</small> </h3>
+                                <p>Founder</p>
+                                
+                            </div>
+				        </span>
+                    </div>
+
+
+                </div>
+                <div class="team col-md-3  col-sm-4 col-sm-6">
+                    <div class="dc_zoom_css">
+                        <img class="post-person" src="img/ak.jpg" alt="Akshay Kheveria">
+                        <span class="roll_css6xx">
+                            <div class="desc">
+                                <h3>Akshay Kheveria, <br><small>IIT Roorkee</small></h3>
+                                <p>Lead UI/UX Designer</p>
+                                
+                            </div>
+				        </span>
+                    </div>
+                </div>
+                <div class="team col-md-3 col-sm-4 col-sm-6">
+                    <div class="dc_zoom_css">
+
+                        <img class="post-person" src="img/avi.jpg" alt="Aviral Verma">
+                        <span class="roll_css6xx">
+                            <div class="desc">
+                                <h3>Aviral Verma, <br><small>IIT Roorkee</small> </h3>
+                                <p>Growth</p>
+                                
+                            </div>
+				        </span>
+                    </div>
+
+
+                </div>
+                <div class="team col-md-3 col-sm-4 col-sm-6">
+                    <div class="dc_zoom_css">
+
+                        <img class="post-person" src="img/pro.jpg" alt="Proshanto Gupta">
+                        <span class="roll_css6xx">
+                            <div class="desc">
+                                <h3>Proshanto Gupta, <br><small>NIT Jamshedpur</small> </h3>
+                                <p>Developer</p>
+                                
+                            </div>
+				        </span>
+                    </div>
+
+
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+    </div>
+
+    <!---end-our team-->
+    <div class="contact" id="contact">
+        <div class="wrap">
+            <h2>Get in touch</h2>
+            <h4>Our Professionals are here to assist you with your product development.</h4>
+            <div class="section group">
+                <div class="col span_2_of_3">
+                    <div class="contact-form">
+                        <form method="post" action="mail.php">
+
+                            <input type="text" class="textbox" name="Name" id="Name" placeholder="Your Name*" required>
+                            <input type="email" class="textbox" name="Email" id="Email" placeholder="Your Email*" required>
+                            <input type="tel" class="textbox" name="MobileNo" id="MobileNo" placeholder="Mobile*" required>
+                            <input type="text" class="textbox" name="Skype" id="Skype" placeholder="Skype Id">
+                            <textarea type="text" class="textbox" name="Message" id="Message" placeholder="Message*" rows="3" required></textarea>
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-primary">Reset</button>
+                            </div>
+                            <div class="clear"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col span_1_of_3">
+                    <div class="company_address">
+                        <h5>Connect with Us</h5>
+                        <ul class="list3">
+                            <li>
+                                <img src="images/location.png" alt="" />
+                                <div class="extra-wrap">
+                                    <p>8, Meadows Mystique, Wagholi,</p>
+                                    <p>Pune, Maharashtra, India-412207</p>
+                                </div>
+                                <div class="clear"> </div>
+                            </li>
+
+                            <li>
+                                <img src="images/phone.png" alt="" />
+                                <div class="extra-wrap">
+                                    <p>+91-954 039 8871</p>
+                                </div>
+                                <div class="clear"> </div>
+                            </li>
+
+                            <li>
+                                <img src="images/mail.png" alt="" />
+                                <div class="extra-wrap">
+                                    <p> <a href="mailto:info.invokertech@gmail.com"> projects@invoker.tech</a></p>
+                                </div>
+                                <div class="clear"> </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p class="copy">&#169 2016 by <a href="http://invoker.tech" target="_blank">InvokerTech Team</a> </p>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                        containerHoverID: 'toTopHover', // fading element hover id
+                        scrollSpeed: 1200,
+                        easingType: 'linear'
+                    };
+
+
+                    $().UItoTop({
+                        easingType: 'easeOutQuart'
+                    });
+
+                });
+            </script>
+            <a href="#" id="toTop" style="display: block; border-radius: 100%; border:2px solid #999;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+            <script src="js/jquery.scrollTo.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
